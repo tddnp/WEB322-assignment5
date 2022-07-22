@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-md-12">
+        <br>
+        <h2>Employees</h2>
+        <hr />
+        <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Employees&nbsp;Num</th>
+                    <th>Full&nbsp;Name</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Status</th>
+                    <th>Course ID</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each employees}}
+                    <tr>{{employeeNum}}
+                    <tr>{{firstName}} {{lastName}}</tr>
+                    <tr><a href="mailto:{{email}}">{{email}}</a></tr>
+                    <tr>{{addressStreet}} {{addressCity}} {{addressProvince}}</tr>
+                    <tr>{{status}}</tr>
+                    <tr>{{course}}</tr>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>        
+    </div>
+</div>
+{{#unless students}}
+<div class="col-md-12 text-center">
+    <strong>{{message}}</strong>
+</div>
+{{/unless}}
